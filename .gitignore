@@ -4,3 +4,8 @@ exe.exe
 log.log
 ypp.tab.?pp
 lex.yy.c
+
+*.aux
+*.out
+*.log
+*.toc

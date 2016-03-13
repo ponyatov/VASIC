@@ -17,4 +17,4 @@ CFLAGS += -ansi
 y.tab.c: y.y
 	bison $<
 lex.yy.c: l.l Makefile
-	flex $<
+	flex -I $<

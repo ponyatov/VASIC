@@ -13,8 +13,8 @@ manual_ru.pdf: $(TEX) $(SRC) Makefile
 tmp/%.log: test/%.src ./exe.exe
 	./exe.exe < $< > $@
 
-src.src: $(TEST)
-	cat $(TEST) > src.src
+src.src: $(SRC)
+	cat $(SRC) > src.src
 
 log.log: ./exe.exe src.src
 	./exe.exe < src.src > log.log && tail log.log

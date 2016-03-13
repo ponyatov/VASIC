@@ -7,3 +7,7 @@ https://www.youtube.com/playlist?list=PLBOh8f9FoHHiKx3ZCPxOZWUtZswrj2zI0
 ### required
 win32: MinGW GNU toolchain with G++, Flex, Bison and Make
 
+## syntax
+
+### line comments
+comments starts with # sign

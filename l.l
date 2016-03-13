@@ -8,5 +8,4 @@
 
 print		TOC(PRINT)
 
-[ \t\r\n]+	{}
 %%

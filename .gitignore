@@ -5,6 +5,9 @@ log.log
 y.tab.?
 lex.yy.c
 
+src.src
+tmp/
+
 *.aux
 *.out
 *.log

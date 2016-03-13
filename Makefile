@@ -3,9 +3,18 @@ all: pdf log.log
 
 TEX = manual_ru.tex ../texheader/mini.tex
 
+SRC = test/comment.src tmp/comment.log
+
 LATEX = pdflatex -halt-on-error
-manual_ru.pdf: $(TEX) Makefile
+pdf: manual_ru.pdf
+manual_ru.pdf: $(TEX) $(SRC) Makefile
 	$(LATEX) $< && $(LATEX) $<
+
+tmp/%.log: test/%.src ./exe.exe
+	./exe.exe < $< > $@
+
+src.src: $(TEST)
+	cat $(TEST) > src.src
 
 log.log: ./exe.exe src.src
 	./exe.exe < src.src > log.log && tail log.log

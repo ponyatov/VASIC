@@ -3,11 +3,12 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 
 extern int yylex();
 extern int yylineno;
 extern char* yytext;
-#define TOC(X) { yylval.s=yytext; return X; }
+#define TOCS(X) { yylval.s=(char*)strdup(yytext); return X; }
 extern int yyparse();
 extern void yyerror(char*);
 #include "y.tab.h"

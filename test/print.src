@@ -1,0 +1,3 @@
+# print <expresion>
+# print <выражение>
+print 'hello world'

@@ -54,6 +54,11 @@ manual.tex & \LaTeX & исходный текст этого руководст�
 \prog{git}\note{система управления версиями исходного текста, 
 и сетевое хранилище \href{https://github.com/ponyatov/VASIC}{GitHub}}
 
+\secly{Загрузка и сборка}
+
+Пакет предоставляется \emph{в исходных текстах}\ с репозитория \url{https://github.com/ponyatov/VASIC}. 
+\input{../texheader/soft}
+
 \secrel{Синтаксис языка \vasic\\(с примерами кода из батареи тестов)}\secdown
 \secrel{Комментарии}
 
@@ -62,9 +67,51 @@ manual.tex & \LaTeX & исходный текст этого руководст�
 
 \secrel{Скаляры}\secdown
 
-\termdef{Скаляры}{скаляр}\ --- типы объектов, соответствующие единичные
-самодостаточные элементы данных, которые можно считать атомами
+\termdef{Скаляры}{скаляр}\ --- типы объектов, соответствующие \emph{единичным}\
+самодостаточным элементам данных, которые можно считать атомами
 информатики\note{computer science}: символ (идентификатор), строка, число.
+
+\secrel{\class{sym}: символ (идентификатор)}\label{sym}
+
+\lstv{test/sym.src}{test/sym.src}
+\lstv{}{tmp/sym.log}
+
+\secrel{\class{str}: строка}\label{str}
+
+\lstv{test/str.src}{test/str.src}
+\lstv{}{tmp/str.log}
+
+\secrel{\class{int}: целое число}\label{int}
+
+\lstv{test/int.src}{test/int.src}
+\lstv{}{tmp/int.log}
+
+\secrel{\class{num}: число с плавающей точкой}\label{num}
+
+\lstv{test/num.src}{test/num.src}
+\lstv{}{tmp/num.log}
+
+\secrel{\class{hex}: машинное целое}\label{hex}
+
+\lstv{test/hex.src}{test/hex.src}
+\lstv{}{tmp/hex.log}
+
+\secrel{\class{bin}: битовая строка}\label{bin}
+
+\lstv{test/bin.src}{test/bin.src}
+\lstv{}{tmp/bin.log}
+
+\secup
+
+\secrel{Команды}\secdown
+
+\secrel{\var{PRINT}}\label{print}
+
+Реализация команды \var{print}\ рассмотрено в уроке
+\href{https://www.youtube.com/watch?v=LDDRn2f9fUk&list=PLBOh8f9FoHHiKx3ZCPxOZWUtZswrj2zI0&index=2}{Make Your Own Programming Language - Part 1 - Lexer}
+
+\lstv{test/print.src}{test/print.src}
+\lstv{}{tmp/print.log}
 
 \secup
 
